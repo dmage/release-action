@@ -1072,6 +1072,8 @@ async function run() {
     }
 }
 function createAction() {
+    core.debug("Core debug is on");
+    console.debug("Console debug is on");
     const token = core.getInput('token');
     const context = github.context;
     const git = github.getOctokit(token, {
