@@ -1067,6 +1067,7 @@ async function run() {
         await action.perform();
     }
     catch (error) {
+        console.log(error);
         const githubError = new GithubError_1.GithubError(error);
         core.setFailed(githubError.toString());
     }

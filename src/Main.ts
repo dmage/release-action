@@ -15,6 +15,7 @@ async function run() {
         const action = createAction()
         await action.perform()
     } catch (error) {
+	console.log(error)
         const githubError = new GithubError(error)
         core.setFailed(githubError.toString());
     }
